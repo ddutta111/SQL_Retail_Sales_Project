@@ -360,4 +360,5 @@ This project serves for retails sales data clenaing, exploratory analysis, and f
 ## Author - Debolina Dutta
 
 This project is part of my portfolio, showcasing the SQL skills essential for data analytics roles. 
+
 *LinkedIn**: (https://www.linkedin.com/in/duttadebolina/)
