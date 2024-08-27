@@ -15,8 +15,9 @@ This project is designed to demonstrate SQL skills and techniques typically used
 4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
 
 -- **Database Setup and Table Creation**
-
+```sql
 CREATE DATABASE retailsales;
+
 
 -- Create table
 CREATE TABLE retailsales
@@ -33,9 +34,9 @@ CREATE TABLE retailsales
     cogs FLOAT,
     total_sale FLOAT
 );
-
+```
 -- **Data Cleaning**
-
+```sql
 Select * From retailsales;
 
 -- Taking care of missing values
@@ -81,10 +82,11 @@ WHERE
 
 -- Record Count
 Select Count(*) FROM retailsales;
+```
 
 -- **Data exploration**
 -- **Key KPIs:**
-
+```sql
 -- **Number of Sales**
 SELECT COUNT(*) as total_sale FROM retailsales;
 
@@ -93,9 +95,10 @@ SELECT COUNT(DISTINCT customer_id) as total_sale from retailsales;
 
 -- **Number of Categories**
 SELECT DISTINCT category FROM retailsales;
+```
 
 -- **Analysis of Data in order to Provide Key Business Insights:**
-
+```sql
 -- **Sales/Revenue and Product Category Insight**
 
 -- **Total Sales/Total Revenue**
@@ -131,11 +134,11 @@ LIMIT 5;
 -- **Total sales are greater than 1000**
 SELECT * FROM retailsales
 WHERE total_sale > 1000;
-
+```
 
 
 -- **Sales Trend And Shift Hour Analysis**
-
+```sql
 -- **Average Selling for Each Month & The Best Selling Month in each year by Product Category**
 
 -- First, this query calculates the average sales for each month across all years and categories.
@@ -194,11 +197,12 @@ SELECT
     COUNT(*) AS number_of_orders
 FROM retailsales
 GROUP BY shift;
+```
 
 
 
  -- **Customer Demographics & Purchasing Behaviour Insight**
- 
+ ```sql
 -- **How does purchasing behavior vary across different age groups or genders?**
 SELECT gender, age, category, SUM(quantiy * price_per_unit) AS total_spent
 FROM retailsales
@@ -275,22 +279,22 @@ SELECT customer_id,
 FROM retailsales
 GROUP BY customer_id
 ORDER BY total_transactions DESC;
-
+```
 
 
 -- **Profitability Analysis**
-
+```sql
 -- **Profit Margin for each Category**
 SELECT category, 
        SUM((price_per_unit - cogs) * quantiy) AS total_profit,
        (SUM((price_per_unit - cogs) * quantiy) / SUM(quantiy * price_per_unit)) * 100 AS profit_margin_percentage
 FROM retailsales
 GROUP BY category;
-
+```
 
 
 -- **Cost Analysis**
-
+```sql
 -- **Total cost of goods sold (COGS) for each category, and how does it compare to the revenue generated?**
 SELECT category, 
        ROUND(SUM(cogs * quantiy), 2) AS total_cogs, 
@@ -298,7 +302,7 @@ SELECT category,
        ROUND(SUM(quantiy * price_per_unit), 2) - ROUND(SUM(cogs * quantiy), 2) AS profit
 FROM retailsales
 GROUP BY category;
-
+```
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Reports & Findings
