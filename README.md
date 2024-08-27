@@ -356,3 +356,8 @@ By implementing these recommendations, the client can enhance their revenue, imp
 ## Conclusion
 
 This project serves for retails sales data clenaing, exploratory analysis, and finding key business-problem anaswers to provide an insight of the dataset to the client for their retail business and recommendations to improve the business. The findings from this project can help drive business decisions by understanding sales patterns, customer segmentation, purchasing behavior, cost analysis, profitability and product performance and take steps accordingly. 
+
+## Author - Debolina Dutta
+
+This project is part of my portfolio, showcasing the SQL skills essential for data analytics roles. 
+*LinkedIn**: (https://www.linkedin.com/in/duttadebolina/)
