@@ -98,9 +98,9 @@ SELECT DISTINCT category FROM retailsales;
 ```
 
 -- **Analysis of Data in order to Provide Key Business Insights:**
-```sql
--- **Sales/Revenue and Product Category Insight**
 
+-- **Sales/Revenue and Product Category Insight**
+```sql
 -- **Total Sales/Total Revenue**
 SELECT SUM(quantiy * price_per_unit) AS total_sales
 FROM retailsales;
